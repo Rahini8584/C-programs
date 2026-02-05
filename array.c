@@ -91,12 +91,14 @@ int main(){
 //     }
 //     return 0;
 // }
-    int n ,s  ;
-    scanf("%d" "%d",&n,&s);
+    int n   ;
+    scanf("%d",&n);
     int i , j  , k=1;
     for(i=1;i<=n;i++){
         for(j=1;j<=i;j++){
-            printf("%d",k);
+           
+            printf("%d ",k);
+            printf("");
             
             k++;
         }
