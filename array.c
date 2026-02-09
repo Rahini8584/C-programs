@@ -91,26 +91,33 @@ int main(){
 //     }
 //     return 0;
 // }
-    int n   ;
-    scanf("%d",&n);
-    int i , j  , k=1;
-    for(i=1;i<=n;i++){
-        for(j=1;j<=i;j++){
+    // int n   ;
+    // scanf("%d",&n);
+    // int i , j  , k=1;
+    // for(i=1;i<=n;i++){
+    //     for(j=1;j<=i;j++){
            
-            printf("%d",k);
-            if(i==j){
-                printf("");
-            }else{
-            printf("*");
-            }
+    //         printf("%d",k);
+    //         if(i==j){
+    //             printf("");
+    //         }else{
+    //         printf("*");
+    //         }
             
-            k++;
+    //         k++;
+    //     }
+    //     printf("\n");
+    // }
+    int n;
+    scanf("%d",&n);
+
+    int i , j;
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;j++){
+            printf("%d ",i*j);
         }
         printf("\n");
     }
-
-
-
     return 0;
 
 
