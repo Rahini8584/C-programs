@@ -149,11 +149,17 @@ int main(){
         arr[i]=a;
 
     }
-    int sum =0;
+    int e=0,o=0;
     for(int i=0;i<n;i++){
-        sum=sum+arr[i];
+        if(arr[i]%2==0){
+            e++;
+        }
+        else{
+            o++;
+        }
     }
-    printf("%d",sum);
+    printf(" no of even no. are %d\n",e);
+    printf("no of odd no. are %d\n",o);
     return 0;
 
 
