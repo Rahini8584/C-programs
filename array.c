@@ -140,26 +140,27 @@ int main(){
     // }
 
 
-    int n ;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++){
-        int a;
-        scanf("%d",&a);
-        arr[i]=a;
+    // int n ;
+    // scanf("%d",&n);
+    // int arr[n];
+    // for(int i=0;i<n;i++){
+    //     int a;
+    //     scanf("%d",&a);
+    //     arr[i]=a;
 
-    }
-    int e=0,o=0;
-    for(int i=0;i<n;i++){
-        if(arr[i]%2==0){
-            e++;
-        }
-        else{
-            o++;
-        }
-    }
-    printf(" no of even no. are %d\n",e);
-    printf("no of odd no. are %d\n",o);
+    // }
+    // int e=0,o=0;
+    // for(int i=0;i<n;i++){
+    //     if(arr[i]%2==0){
+    //         e++;
+    //     }
+    //     else{
+    //         o++;
+    //     }
+    // }
+    // printf(" no of even no. are %d\n",e);
+    // printf("no of odd no. are %d\n",o);
+
     return 0;
 
 
