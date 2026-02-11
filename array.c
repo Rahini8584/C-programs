@@ -161,6 +161,82 @@ int main(){
     // printf(" no of even no. are %d\n",e);
     // printf("no of odd no. are %d\n",o);
 
+    // int a[2][2], b[2][2], sum[2][2], i, j;
+
+    // printf("Enter first matrix:\n");
+    // for(i=0;i<2;i++)
+    //     for(j=0;j<2;j++)
+    //         scanf("%d",&a[i][j]);
+
+    // printf("Enter second matrix:\n");
+    // for(i=0;i<2;i++)
+    //     for(j=0;j<2;j++)
+    //         scanf("%d",&b[i][j]);
+
+    // printf("Sum matrix:\n");
+    // for(i=0;i<2;i++){
+    //     for(j=0;j<2;j++){
+    //         sum[i][j]=a[i][j]+b[i][j];
+    //         printf("%d ",sum[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+
+
+    // int m,n;
+    // scanf("%d %d",&m,&n);
+    // int a[m][n];
+    // for(int i=0;i<3;i++){
+    //     for(int j=1;j<3;j++){
+    //         scanf("%d",&a[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // for(int i=0;i<m;i++){
+    //     for(int j=1;j<n;j++){
+    //         int b[1][n];
+    //         if(i==0){
+    //             b[0][j]=a[0][j];
+    //             a[0][j]=a[m][j];
+    //             a[m][j]=b[0][j];
+    //         }
+    //         }
+    //     }
+    // printf("%d",a[m][n]);
+
+    #include <stdio.h>
+
+
+    int m, n;
+    scanf("%d %d", &m, &n);
+    
+    
+    int a[m][n];
+    
+    for(int i = 0; i < m; i++) {
+        for(int j = 0; j < n; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    
+    for(int j = 0; j < n; j++) {
+        int temp = a[0][j];
+        a[0][j] = a[m-1][j];
+        a[m-1][j] = temp;
+    }
+    printf("\n");
+    
+    for(int i = 0; i < m; i++) {
+        for(int j = 0; j < n; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    
+
+
+
+
     return 0;
 
 
