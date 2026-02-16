@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
     // collection of elements of same data type
     // can be indexed
@@ -234,39 +235,79 @@ int main(){
     // }
     
 
+    // char  a[] ="Programming";
+    // printf("%d",strlen(a));
+
+    // char a[] = "computer";
+    // char b[9] ;
+    // strcpy(b,a);
+    // printf("%s",b);
 
 
 
+    /// strcat -- two concatenate two strings
+    /// strcat(destination,source)
+    // char a[]="Good";
+    // char b[]="Morning";
+
+    
+    // printf("%s",strcat(a,b));
+    // char a[]="India";
+    // char b[]="india";
 
 
+    // if(strcmp(a,b)==0){
+    //     printf("strings are equal");
+    // }
+    // else{
+    //     printf("strings are not equal");
+    // }
+
+    // char a[]="java";
+    // char b[]="programming";
+    // char c[]="C";
+    // if(strlen(a)>strlen(b) && strlen(a)>strlen(c) ){
+    //     printf("%s",a);
+    // }
+    // else if(strlen(b)>strlen(a) && strlen(b)>strlen(c)){
+    //     printf("%s",b);
+    // }
+    // else{
+    //     printf("%s",c);
+    // }
 
 
+    // char a[]="good";
+    // char b[]="morning";
+    // if(strcmp(a,b)!=0){
+    //     printf("%s",strcat(a,b));
+    // }
+    // else{
+    //     printf("%s",a);
+    // }
 
 
+    // char a[6];
+    // scanf("%s",&a);
+    // char b[] ="admin";
 
+    // if(strcmp(a,b)==0){
+    //     printf("Access granted");
+    // }
+    // else{
+    //     printf("access denied");
+    // }
 
+    // char a[9];
+    // scanf("%s",&a);
+    // if(strlen(a)>=8){
+    //     printf("Strong");
+    // }
+    // else{
+    //     printf("Weak");
+    // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
     return 0;
