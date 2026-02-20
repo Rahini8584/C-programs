@@ -307,7 +307,13 @@ int main(){
     //     printf("Weak");
     // }
 
-    
+    int i =1234;
+    int n;
+
+    n= i%10;
+    n=n/1000;
+    n=n+i;
+    printf("%d",n);
 
 
     return 0;
