@@ -307,13 +307,52 @@ int main(){
     //     printf("Weak");
     // }
 
-    int i =1234;
-    int n;
+    // int i =1234;
+    // int n;
 
-    n= i%10;
-    n=n/1000;
-    n=n+i;
-    printf("%d",n);
+    // n= i%10;
+    // n=n/1000;
+    // n=n+i;
+    // printf("%d",n);
+
+
+
+
+//     int n;int sum=0;
+
+// printf(" Enter the number of elements (max 20): ");
+
+// scanf("%d",&n);
+
+// int a[n];
+
+// for(int i=0;i<n;i++)
+
+// {
+
+// printf("Enter %d value: ",i);
+
+// scanf("%d",&a[i]);
+
+// printf("\n");
+
+// }
+
+// for(int i=0;i<n;i++)
+
+// {
+
+// printf("\nEntered value is = %d ",a[i]);
+
+// sum=sum+a[i];
+
+// }
+
+// printf("\nSum= %d",sum);
+
+
+
+
 
 
     return 0;
