@@ -351,43 +351,43 @@ int main(){
 // printf("\nSum= %d",sum);
 
 
-#define MAX_SIZE 100
+// #define MAX_SIZE 100
 
-    int ra, ca, rb, cb;
-    int a[MAX_SIZE][MAX_SIZE], b[MAX_SIZE][MAX_SIZE], sum[MAX_SIZE][MAX_SIZE];
+//     int ra, ca, rb, cb;
+//     int a[MAX_SIZE][MAX_SIZE], b[MAX_SIZE][MAX_SIZE], sum[MAX_SIZE][MAX_SIZE];
     
-    printf("input for matrix a---\n");
-    scanf("%d %d", &ra, &ca);
+//     printf("input for matrix a---\n");
+//     scanf("%d %d", &ra, &ca);
     
-    for(int i = 0; i < ra; i++) {
-        for(int j = 0; j < ca; j++) {
-            scanf("%d", &a[i][j]);
-        }
-    }
+//     for(int i = 0; i < ra; i++) {    
+//         for(int j = 0; j < ca; j++) {
+//             scanf("%d", &a[i][j]);
+//         }
+//     }
     
-    printf("input for matrix b---\n");
-    scanf("%d %d", &rb, &cb);
+//     printf("input for matrix b---\n");
+//     scanf("%d %d", &rb, &cb);
     
-    // Check dimensions match
-    if (ra != rb || ca != cb) {
-        printf("Error: Matrices must have same dimensions!\n");
-        return 1;
-    }
+//     // Check dimensions match
+//     if (ra != rb || ca != cb) {
+//         printf("Error: Matrices must have same dimensions!\n");
+//         return 1;
+//     }
     
-    for(int i = 0; i < rb; i++) {
-        for(int j = 0; j < cb; j++) {
-            scanf("%d", &b[i][j]);
-        }
-    }
+//     for(int i = 0; i < rb; i++) {
+//         for(int j = 0; j < cb; j++) {
+//             scanf("%d", &b[i][j]);
+//         }
+//     }
     
-    // Calculate and print sum
-    for(int i = 0; i < ra; i++) {
-        for(int j = 0; j < ca; j++) {  // Fixed: ca instead of ra
-            sum[i][j] = a[i][j] + b[i][j];
-            printf("%d ", sum[i][j]);
-        }
-        printf("\n");
-    }
+//     // Calculate and print sum
+//     for(int i = 0; i < ra; i++) {
+//         for(int j = 0; j < ca; j++) {  // Fixed: ca instead of ra
+//             sum[i][j] = a[i][j] + b[i][j];
+//             printf("%d ", sum[i][j]);
+//         }
+//         printf("\n");
+//     }
     
 
     return 0;
