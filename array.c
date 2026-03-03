@@ -390,5 +390,38 @@ int main(){
 //     }
     
 
+
+// #include <stdio.h>
+
+// int main() {
+// 	// your code goes here
+//    int x;
+//    scanf("%d",&x);
+  
+//    if(x%3==0){
+//        printf("%d",x);
+//    }
+//    else if(x%3==1)  printf("%d",x-1);
+//    else if(x%3==2)  printf("%d",x+1);
+//    return 0;
+// }
+
+// nclude <stdio.h>
+
+// int main() {
+// 	// your code goes here
+//     int x;
+//     scanf("%d",&x);
+    
+//     if(x%3==0){
+//         printf("%d",x);
+//     }
+//     else if(x%3==1) printf("%d",x-1);
+//     else if(x%3==2) printf("%d",x+1);
+//     return 0 ;
+    
+// }
+
+
     return 0;
 }
