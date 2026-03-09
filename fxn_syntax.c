@@ -1,32 +1,35 @@
-// fxn  has three parts 
+// fxn  has three parts
 // part 1 ------ fxn dec ---
 // rt fxn-name()
-// part 2 ---- fxn calling -- 
+// part 2 ---- fxn calling --
 // fxn-name(value of argument if needed)
 // part 3 ----- fxn def ---
 // rt fxn-name(){
 // }
 
+// fxn has 4 types
+//  1. NR NA
+//  2. NR WA
+//  3. WR NA
+//  4. WR WA
 
-
-//fxn has 4 types 
-// 1. NR NA
-// 2. NR WA
-// 3. WR NA
-// 4. WR WA
-
-
-#include<stdio.h>
+// #include <stdio.h>
 // void add();
 // void add2( int, int);
-int main(){
+// void arrPassing(int *);
+// int main()
+// {
     // add();
     // printf("\n");
     // int a, b;
     // scanf("%d %d",&a,&b);
     // add2(a,b);
-    return 0 ;
-}
+
+//     int a[5] = {1, 2, 3, 4, 5};
+//     arrPassing(a);
+
+//     return 0;
+// }
 
 // void add(){
 //     int a, b;
@@ -37,3 +40,32 @@ int main(){
 // void add2(int x,int y){
 //     printf("sum= %d",x+y);
 // }
+
+// void arrPassing(int a[])
+// {
+//     int n = sizeof(int *) / 4;
+//     int i;
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d\n", a[i]);
+//     }
+// }
+#include <stdio.h>
+
+void arrPassing(int *a, int n);
+
+int main()
+{
+    int a[5] = {1, 2, 3, 4, 5};
+    arrPassing(a, 5);   // pass size explicitly
+    return 0;
+}
+
+void arrPassing(int a[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("%d\n", a[i]);
+    }
+}
