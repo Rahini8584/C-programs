@@ -50,22 +50,38 @@
 //         printf("%d\n", a[i]);
 //     }
 // }
+// #include <stdio.h>
+
+// void arrPassing(int *a, int n);
+
+// int main()
+// {
+//     int a[5] = {1, 2, 3, 4, 5};
+//     arrPassing(a, 5);   // pass size explicitly
+//     return 0;
+// }
+
+// void arrPassing(int a[], int n)
+// {
+//     int i;
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d\n", a[i]);
+//     }
+// }
+
 #include <stdio.h>
+// int add(int, int);
+int main(){
+    // int a, b;
+    // printf("Enter 2 numbers:\n");
+    // scanf("%d %d",&a,&b);
+    // int result = add(a,b);
+    // printf("SUM IS %d",result);
 
-void arrPassing(int *a, int n);
-
-int main()
-{
-    int a[5] = {1, 2, 3, 4, 5};
-    arrPassing(a, 5);   // pass size explicitly
     return 0;
 }
-
-void arrPassing(int a[], int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-    {
-        printf("%d\n", a[i]);
-    }
-}
+// int add(int a, int b){
+//     int c = a+b;
+//     return c;
+// }
