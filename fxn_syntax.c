@@ -72,18 +72,29 @@
 
 #include <stdio.h>
 // int add(int, int);
-int square(int);
+// int square(int);
+char evenOdd(int);
 int main(){
     // int a, b;
     // printf("Enter 2 numbers:\n");
     // scanf("%d %d",&a,&b);
     // int result = add(a,b);
     // printf("SUM IS %d",result);
-    int n ;
-    printf("Enter a number:\n");
-    scanf("%d",&n);
-    int result=square(n);
-    printf("square of %d is %d",n,result);
+    // int n ;
+    // printf("Enter a number:\n");
+    // scanf("%d",&n);
+    // int result=square(n);
+    // printf("square of %d is %d",n,result);
+    int x;
+    printf("enter a number :\n");
+    scanf("%d",&x);
+    int result = evenOdd(x);
+    if(result=='E'){
+        printf("the no. is even");
+    }
+    else{
+        printf("the no. is odd");
+    }
 
     return 0;
 }
@@ -92,6 +103,15 @@ int main(){
 //     return c;
 // }
 
-int square(int n){
-    return n*n;
+// int square(int n){
+//     return n*n;
+// }
+
+char evenOdd(int n){
+    if(n%2==0){
+        return 'E';
+    }
+    else{
+        return 'O';
+    }
 }
