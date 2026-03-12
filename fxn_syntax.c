@@ -72,12 +72,18 @@
 
 #include <stdio.h>
 // int add(int, int);
+int square(int);
 int main(){
     // int a, b;
     // printf("Enter 2 numbers:\n");
     // scanf("%d %d",&a,&b);
     // int result = add(a,b);
     // printf("SUM IS %d",result);
+    int n ;
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    int result=square(n);
+    printf("square of %d is %d",n,result);
 
     return 0;
 }
@@ -85,3 +91,7 @@ int main(){
 //     int c = a+b;
 //     return c;
 // }
+
+int square(int n){
+    return n*n;
+}
