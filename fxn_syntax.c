@@ -73,7 +73,7 @@
 #include <stdio.h>
 // int add(int, int);
 // int square(int);
-char evenOdd(int);
+// char evenOdd(int);
 int main(){
     // int a, b;
     // printf("Enter 2 numbers:\n");
@@ -85,16 +85,16 @@ int main(){
     // scanf("%d",&n);
     // int result=square(n);
     // printf("square of %d is %d",n,result);
-    int x;
-    printf("enter a number :\n");
-    scanf("%d",&x);
-    int result = evenOdd(x);
-    if(result=='E'){
-        printf("the no. is even");
-    }
-    else{
-        printf("the no. is odd");
-    }
+    // int x;
+    // printf("enter a number :\n");
+    // scanf("%d",&x);
+    // int result = evenOdd(x);
+    // if(result=='E'){
+    //     printf("the no. is even");
+    // }
+    // else{
+    //     printf("the no. is odd");
+    // }
 
     return 0;
 }
