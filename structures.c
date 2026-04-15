@@ -7,41 +7,53 @@
 //     int marks3;
 // };
 
-struct employee_details{
-    int id;
-    char emp_name[100];
-    float basic_salary;
-    float net_salary;
+// struct employee_details{
+//     int id;
+//     char emp_name[100];
+//     float basic_salary;
+//     float net_salary;
 
-};
+// };
 
-void calc_net_salary(struct  employee_details *ptr){
-    float h , d, net;
-    h= ptr->basic_salary * 0.20;
-    d= ptr;
-    net = n + h + d;
-}
+// void calc_net_salary(struct  employee_details *ptr){
+//     float h , d, net;
+//     h= ptr->basic_salary * 0.20;
+//     d= ptr->basic_salary * 0.10;
+//     ptr->net_salary = ptr->basic_salary + h + d;
+// }
+
+// void displayEmployees(struct employee_details e[], int n ){
+//     int i ;
+//     printf("\nEmployee Details:\n");
+//     printf("ID   Name   Basic   Net salary\n");
+//     for(i = 0 ; i<n ;i++){
+//         printf("%d  %s  %.2f  %.2f\n",e[i].id,e[i].emp_name,e[i].basic_salary, e[i].net_salary);
+//     }
+// }
 int main(){
     // struct Student s1;
     // printf("ENTER NAME : ");
     // scanf("%9s",&s1.student_name);
     // printf("enter marks of 3 subjects :  ");
     // scanf("%d" "%d" "%d",&s1.marks1,&s1.marks2,&s1.marks3);
-   
     // printf("Name : %s\n",s1.student_name);
     // printf("Average marks : %d\n",(s1.marks1+s1.marks2+s1.marks3)/3);
-    struct employee *ptr ;
-
-    struct employee_details e1;
-    ptr = &e1;
-    printf("enter ID : \n");
-    scanf("%d",&e1.id);
-    printf("enter Name : \n");
-    scanf("%99s",e1.emp_name);
-    printf("enter Basic Salary : \n");
-    scanf("%d",&e1.basic_salary);
+    // int n , i ;
+    // printf("Enter no. of employees : \n");
+    // scanf("%d",&n);
+    // struct employee_details emp[n];
+    // for(i=0;i<n;i++){
+    // printf("enter ID : \n");
+    // scanf("%d",&emp[i].id);
+    // printf("enter Name : \n");
+    // scanf("%s",emp[i].emp_name);
+    // printf("enter Basic Salary : \n");
+    // scanf("%f",&emp[i].basic_salary);
+    // calc_net_salary(&emp[i]);
+    // }
+    // displayEmployees(emp,n);
     return 0 ;
-    
+
 }
 
 
