@@ -54,3 +54,77 @@
 
 //     return 0;
 // }
+
+// #include <stdio.h>
+// void marks_details(int a[] , int n ){
+//     int max = a[0];
+//     int min = a[0];
+//     int sum = 0;
+//     for(int i = 0 ; i<n ; i++){
+//         sum = sum +a[i];
+//         if(max<a[i]){
+//             max=a[i];
+//         }
+        
+
+//         if(min>a[i]){
+//             min=a[i];
+//         }
+        
+//     }
+//     printf("Highest marks : %d\n",max);
+//     printf("Lowest marks : %d\n",min);
+//     printf("Average marks : %.2f",(float)sum/n);
+
+// }
+// int main(){
+
+//     int n ;
+//     printf("Enter no. of students : ");
+//     scanf("%d",&n);
+//     int arr[n];
+//     printf("Enter marks of students : ");
+//     for(int i = 0 ; i<n; i++){
+//         scanf("%d",&arr[i]);
+//     }
+
+//     marks_details(arr,n);
+
+//     return 0;
+
+// }
+
+
+// #include<stdio.h>
+
+
+// void temp_details(int arr[] , int n){
+//     int hot_days = 0 ;
+//     int cold_days = 0 ;
+//     int sum = 0 ;
+//     for(int i  = 0 ; i<n ; i++){
+//         sum = sum + arr[i];
+//         if(arr[i]>30){
+//             hot_days++;
+//         }
+
+//         if(arr[i]<15){
+//             cold_days++;
+//         }
+//     }
+//     printf("Hot days : %d\n",hot_days);
+//     printf("Cold days : %d\n",cold_days);
+//     printf("Average Temp : %.2f\n",(float)sum/n);
+// }
+// int main(){
+//     int n ; 
+//     printf("Enter no. of days : ");
+//     scanf("%d",&n);
+//     int arr[n] ;
+//     printf("enter the temperature for N days : ");
+//     for(int i = 0 ; i < n ; i++ ){
+//         scanf("%d",&arr[i]);
+//     }
+//     temp_details(arr,n);
+//     return 0 ;
+// }
