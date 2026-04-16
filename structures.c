@@ -1,4 +1,4 @@
-#include<stdio.h>
+// #include<stdio.h>
 
 // struct Student{
 //     char student_name[10];
@@ -30,7 +30,7 @@
 //         printf("%d  %s  %.2f  %.2f\n",e[i].id,e[i].emp_name,e[i].basic_salary, e[i].net_salary);
 //     }
 // }
-int main(){
+// int main(){
     // struct Student s1;
     // printf("ENTER NAME : ");
     // scanf("%9s",&s1.student_name);
@@ -52,9 +52,9 @@ int main(){
     // calc_net_salary(&emp[i]);
     // }
     // displayEmployees(emp,n);
-    return 0 ;
+    // return 0 ;
 
-}
+// }
 
 
 // ----------------------- PRACTICE QUESTION 1 --------------------
@@ -176,3 +176,128 @@ int main(){
 //     return 0;
 // }
 // ---------------------------------------------------------------------
+
+// ------------------------------------------------------------------practice question 3 -------------------------------------------------------------
+//Sensor Data Analyzer with Pointer Arithmetic (Bug Detection Scenario)
+
+// Problem Statement
+
+// A system records temperature readings from sensors. You are given:
+
+// N sensor readings (integer values)
+// You need to:
+
+// Store readings in an array
+// Use pointer arithmetic (not array indexing) to:
+// Calculate sum
+// Find maximum value
+// Count how many readings are above average
+// Display results in a formatted output
+// ⚠️ Important Constraints:
+
+// Use pointer arithmetic only (no arr[i] inside logic functions)
+// No recursion
+// No dynamic memory allocation
+// Avoid common pointer bugs:
+// Uninitialized pointer (wild pointer)
+// A pointer declared but not initialized points to garbage memory.
+
+ 
+// Wrong:
+// int *ptr;     // wild pointer
+
+// *ptr = 10;    // ❌ undefined behavior (may crash)
+// Correct:
+// int x = 10;
+
+// int *ptr = &x;   // initialized
+// OR
+
+//              int *ptr = NULL; // safe initialization
+// Out-of-bounds access
+// Dangling pointer
+// Input Format
+// Enter number of readings: N
+// Enter N readings:
+// Output Format
+
+// ================ SENSOR REPORT ================
+// Total Readings: N
+// Sum: X
+// Average: Y
+// Maximum: Z
+// Readings above average: K
+// ==============================================
+// Sample Test Case
+
+// Input:
+// Enter number of readings: 5
+// Enter readings: 10 20 30 40 50
+// Output:
+
+// ================ SENSOR REPORT ================
+// Total Readings: 5
+// Sum: 150
+// Average: 30.00
+// Maximum: 50
+// Readings above average: 2
+// ==============================================
+
+//--------------------------------------------------------------------- SOLUTION ---------------------------------------------------------------------------------
+// #include <stdio.h>
+
+// int main() {
+//     int N;
+
+//     // Static array (fixed size, no malloc)
+//     int readings[1000];        // max 1000 readings, no #define
+
+//     // Pointer to the start of the array
+//     int *ptr = readings;       // initialized
+
+//     // Read number of readings
+//     printf("Enter number of readings: ");
+//     scanf("%d", &N);
+
+//     // Read N temperature readings (ptr points to readings[0])
+//     printf("Enter %d readings: ", N);
+//     for (int i = 0; i < N; ++i) {
+//         scanf("%d", ptr + i);  // pointer arithmetic, no arr[i]
+//     }
+
+//     // Compute sum and max using pointer arithmetic
+//     int *p = ptr;              // points to first element
+//     long long sum = 0;
+//     int max = *(p + 0);        // first element
+
+//     for (int i = 0; i < N; ++i) {
+//         int val = *(p + i);    // pointer arithmetic
+//         sum += val;
+//         if (val > max) {
+//             max = val;
+//         }
+//     }
+
+//     // Compute average
+//     double avg = (double)sum / N;
+
+//     // Count how many readings are above average
+//     int count_above_avg = 0;
+//     for (int i = 0; i < N; ++i) {
+//         int val = *(p + i);    // pointer arithmetic
+//         if (val > avg) {
+//             ++count_above_avg;
+//         }
+//     }
+
+//     // Output formatted sensor report
+//     printf("================ SENSOR REPORT ================\n");
+//     printf("Total Readings: %d\n", N);
+//     printf("Sum: %lld\n", sum);
+//     printf("Average: %.2f\n", avg);
+//     printf("Maximum: %d\n", max);
+//     printf("Readings above average: %d\n", count_above_avg);
+//     printf("==============================================\n");
+
+//     return 0;
+// }
