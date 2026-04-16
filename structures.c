@@ -15,6 +15,8 @@
 
 // };
 
+
+
 // void calc_net_salary(struct  employee_details *ptr){
 //     float h , d, net;
 //     h= ptr->basic_salary * 0.20;
@@ -299,5 +301,152 @@
 //     printf("Readings above average: %d\n", count_above_avg);
 //     printf("==============================================\n");
 
+//     return 0;
+// }
+//-------------------------------------------------------------Practice question 2 -------------------------------------------------------------------------------------
+// Student Result Processing System using Function Pointers
+// Problem Statement
+// A college wants to process student results. Each student has:
+// Roll Number
+// Name
+// Marks in 3 subjects
+// You need to:
+// Store details of N students using structures
+// Calculate:
+// Total Marks
+// Average Marks
+// Grade based on average:
+// A → ≥ 75
+// B → 60–74
+// C → 50–59
+// F → < 50
+// Use:
+// Pointer to structure
+// Array of structures
+// Function pointer to calculate result
+// Display student results in a formatted table
+// Constraints:
+// No recursion
+// No dynamic memory allocation
+//  
+//  
+// 3. Input Format
+// Enter number of students: N
+
+// For each student:
+// Roll No:
+// Name:
+// Marks in 3 subjects:
+// 4. Output Format
+// ============================================================
+//                  STUDENT RESULT REPORT
+// ============================================================
+// Roll   Name         Total    Average  Grade
+// ------------------------------------------------------------
+// ...
+// ============================================================
+//  
+// Sample Test Case
+// Input:
+// Enter number of students: 2
+
+
+
+// --- Enter details of Student 1 ---
+
+// Roll No: 1
+
+// Name: Aman
+
+// Marks in 3 subjects: 80 70 90
+
+
+
+// --- Enter details of Student 2 ---
+
+// Roll No: 2
+
+// Name: Neha
+
+// Marks in 3 subjects: 50 60 40
+// Output:
+// ============================================================
+//                  STUDENT RESULT REPORT
+// ============================================================
+// Roll   Name         Total    Average  Grade
+// ------------------------------------------------------------
+// 1      Aman         240      80.00    A
+// 2      Neha         150      50.00    C
+// ============================================================'
+//------------------------------------------------------------- SOLUTION ---------------------------------------------------------------------------------
+// #include <stdio.h>
+
+// struct Student {
+//     int roll;
+//     char name[50];
+//     int marks[3];
+//     int total;
+//     float average;
+//     char grade;
+// };
+
+// void calculateResult(struct Student *s) {
+//     s->total = s->marks[0] + s->marks[1] + s->marks[2];
+//     s->average = s->total / 3.0;
+
+//     if (s->average >= 75)
+//         s->grade = 'A';
+//     else if (s->average >= 60)
+//         s->grade = 'B';
+//     else if (s->average >= 50)
+//         s->grade = 'C';
+//     else
+//         s->grade = 'F';
+// }
+
+// int main() {
+//     int n, i;
+
+//     void (*resultPtr)(struct Student *);
+//     resultPtr = calculateResult;
+
+//     struct Student students[100];   // using 100 as fixed size instead of #define
+//     struct Student *ptr;
+
+//     printf("Enter number of students: ");
+//     scanf("%d", &n);
+
+//     // Input details for each student
+//     for (i = 0; i < n; i++) {
+//         ptr = &students[i];
+
+//         printf("\n--- Enter details of Student %d ---\n", i + 1);
+
+//         printf("Roll No: ");
+//         scanf("%d", &ptr->roll);
+
+//         printf("Name: ");
+//         scanf("%s", ptr->name);
+
+//         printf("Marks in 3 subjects: ");
+//         scanf("%d %d %d", &ptr->marks[0], &ptr->marks[1], &ptr->marks[2]);
+
+//         resultPtr(ptr);   // call via function pointer
+//     }
+
+//     printf("\n============================================================\n");
+//     printf("                    STUDENT RESULT REPORT\n");
+//     printf("============================================================\n");
+//     printf("%-6s %-12s %-8s %-8s %-5s\n", "Roll", "Name", "Total", "Average", "Grade");
+//     printf("------------------------------------------------------------\n");
+
+//     // Display table
+//     for (i = 0; i < n; i++) {
+//         ptr = &students[i];
+//         printf("%-6d %-12s %-8d %-8.2f %-5c\n",
+//                ptr->roll, ptr->name, ptr->total, ptr->average, ptr->grade);
+//     }
+
+//     printf("============================================================\n");
 //     return 0;
 // }
