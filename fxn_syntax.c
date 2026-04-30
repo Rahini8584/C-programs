@@ -96,6 +96,11 @@ int main(){
     //     printf("the no. is odd");
     // }
 
+    FILE *fp=fopen("hello.bin","wb");
+    int x = 100;
+    fwrite(&x,sizeof(x),1,fp);
+
+    fclose(fp);
     return 0;
 }
 // int add(int a, int b){
@@ -107,11 +112,13 @@ int main(){
 //     return n*n;
 // }
 
-char evenOdd(int n){
-    if(n%2==0){
-        return 'E';
-    }
-    else{
-        return 'O';
-    }
-}
+// char evenOdd(int n){
+//     if(n%2==0){
+//         return 'E';
+//     }
+//     else{
+//         return 'O';
+//     }
+// }
+
+
