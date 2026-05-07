@@ -40,31 +40,31 @@
 // 2. Student Grade Calculator
 // Scenario: Process student records. Calculate average marks and assign grades using function pointers.
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct Student {
-    int rollno;
-    float marks[3];
-};
+// struct Student {
+//     int rollno;
+//     float marks[3];
+// };
 
-float calculateAverage(float m1, float m2, float m3) {
-    return (m1 + m2 + m3) / 3;
-}
+// float calculateAverage(float m1, float m2, float m3) {
+//     return (m1 + m2 + m3) / 3;
+// }
 
-char getGrade(float avg) {
-    if(avg >= 90) return 'A';
-    if(avg >= 80) return 'B';
-    if(avg >= 70) return 'C';
-    return 'F';
-}
+// char getGrade(float avg) {
+//     if(avg >= 90) return 'A';
+//     if(avg >= 80) return 'B';
+//     if(avg >= 70) return 'C';
+//     return 'F';
+// }
 
-int main() {
-    struct Student s = {101, {85, 92, 78}};
+// int main() {
+//     struct Student s = {101, {85, 92, 78}};
     
-    float (*calcAvg)(float, float, float) = calculateAverage;
-    char (*getG)(float) = getGrade;
+//     float (*calcAvg)(float, float, float) = calculateAverage;
+//     char (*getG)(float) = getGrade;
     
-    float avg = calcAvg(s.marks[0], s.marks[1], s.marks[2]);
-    printf("Roll: %d, Average: %.1f, Grade: %c\n", s.rollno, avg, getG(avg));
-    return 0;
-}
+//     float avg = calcAvg(s.marks[0], s.marks[1], s.marks[2]);
+//     printf("Roll: %d, Average: %.1f, Grade: %c\n", s.rollno, avg, getG(avg));
+//     return 0;
+// }
