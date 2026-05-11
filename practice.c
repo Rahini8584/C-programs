@@ -68,3 +68,117 @@
 //     printf("Roll: %d, Average: %.1f, Grade: %c\n", s.rollno, avg, getG(avg));
 //     return 0;
 // }
+
+
+
+
+
+
+#include<stdio.h>
+#include<math.h>
+
+
+
+int add(int a, int b){
+    return a+b;
+}
+int square(int n){
+    return n*n;
+}
+
+
+
+void checkEvenOdd(int n){
+    if(n%2==0){
+        printf("EVEN");
+    }
+    else{
+        printf("ODD");
+    }
+}
+
+
+
+int factorial(int n){
+    int fact = 1;
+    for(int i = 1; i<=n ;i++){
+        fact = fact * i;
+    }
+    return fact ;
+
+}
+
+
+
+int findLargest(int a , int b , int c){
+    if(a>b && a>c){
+        return a;
+    }
+    else if(b>a && b>c){
+        return b;
+    }
+    else{
+        return c;
+    }
+}
+
+
+
+
+int reverseNumber(int n){
+     int rem =0 ;
+    int rev = 0 ;
+   
+    while(n!=0){
+        rem= n%10;
+        rev = rev*10+rem;
+        n=n/10;
+    }
+    return rev ;
+}
+
+
+
+int isArmstrong(int n){
+    int rem = 0;
+    int sum = 0 ;
+    int temp = n;
+    int count = 0 ;
+    int s = n;
+
+    while(s!=0){
+        s%10;
+        count++;
+        s=s/10;
+    }
+    while(temp!=0){
+        rem = temp%10 ;
+        sum += pow(rem,count);
+        temp = temp/10;
+    }
+    if(sum==n){
+        return 1 ;
+    }
+    else {
+        return 0 ;
+    }
+}
+int main(){
+    // int a, b ;
+    // scanf("%d %d",&a,&b);
+    // int result = add(a,b);
+    // printf("%d",result);
+
+    // int m;
+    // scanf("%d",&m);
+    // int result = isArmstrong(m);
+    // printf("%d",result);
+
+
+    // int x, y , z;
+    // scanf("%d %d %d",&x,&y,&z);
+    // int result = findLargest(x,y,z);
+    // printf("%d",result);
+
+    return 0 ;
+}
