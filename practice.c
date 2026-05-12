@@ -85,9 +85,6 @@ int add(int a, int b){
 int square(int n){
     return n*n;
 }
-
-
-
 void checkEvenOdd(int n){
     if(n%2==0){
         printf("EVEN");
@@ -96,9 +93,6 @@ void checkEvenOdd(int n){
         printf("ODD");
     }
 }
-
-
-
 int factorial(int n){
     int fact = 1;
     for(int i = 1; i<=n ;i++){
@@ -107,9 +101,6 @@ int factorial(int n){
     return fact ;
 
 }
-
-
-
 int findLargest(int a , int b , int c){
     if(a>b && a>c){
         return a;
@@ -121,10 +112,6 @@ int findLargest(int a , int b , int c){
         return c;
     }
 }
-
-
-
-
 int reverseNumber(int n){
      int rem =0 ;
     int rev = 0 ;
@@ -136,10 +123,8 @@ int reverseNumber(int n){
     }
     return rev ;
 }
-
-
-
 int isArmstrong(int n){
+
     int rem = 0;
     int sum = 0 ;
     int temp = n;
@@ -163,22 +148,136 @@ int isArmstrong(int n){
         return 0 ;
     }
 }
+int* getAddress(int *x){
+    return x;
+}
+
+
+
+void swap(int *a , int *b){
+    int temp = *a;
+    *a=*b;
+    *b=temp;
+}
+
+
+
+void reversearray(int *arr , int size){
+    int *start = arr ;
+    int *end = arr + size -1;
+    int temp ;
+    while(start <end){
+        temp = *start ;
+        *start = *end ;
+        *end = temp ;
+        start++ ;
+        end--;
+    }
+}
+
+struct StudentMarks{
+    char studentName[50];
+    int marks[3];
+
+};
+
+struct student{
+    char name[50];
+    int marks ;
+
+};
+
+
+struct point{
+    int x ;
+    int y ;
+};
+
+
+
+struct product{
+    char name[50];
+    int price ;
+};
 int main(){
     // int a, b ;
     // scanf("%d %d",&a,&b);
     // int result = add(a,b);
     // printf("%d",result);
-
     // int m;
     // scanf("%d",&m);
-    // int result = isArmstrong(m);
+    // int result =isArmstrong(m);
     // printf("%d",result);
-
-
     // int x, y , z;
     // scanf("%d %d %d",&x,&y,&z);
     // int result = findLargest(x,y,z);
     // printf("%d",result);
+
+    // int a = 10 ;
+    // int *p =getAddress(&a);
+    // printf("%d",*p);
+
+    // int a = 10 , b= 20 ;
+    // int *pa = &a ;
+    // int *pb = &b ;
+    // *pa = 20 ;
+    // *pb = 10 ;
+    // printf("value of a is %d",*pa);
+    
+    // int a , b ;
+    // scanf("%d %d",&a,&b);
+    // swap(&a,&b);
+    // printf("%d %d",a,b);
+    
+    // int arr[] = {1,2,3,4,5,6,7};
+
+    // int size = sizeof(arr)/sizeof(arr[0]);
+    // reversearray(arr,size);
+    // for(int i = 0 ;i<size; i++){
+    //     printf("%d ",arr[i]);
+    // }
+
+
+
+    // struct StudentMarks student ;
+    // int total =0;
+    // scanf("%s",student.studentName);
+    // for(int i = 0 ; i<3 ; i++){
+    //     scanf("%d",&student.marks[i]);
+    //     total += student.marks[i];
+    // }
+    // printf("%d",total);
+
+
+    // struct student std[3];
+    // int highestindex = 0 ;
+    // for(int i =  0 ; i < 3; i++){
+    //     scanf("%s",std[i].name);
+    //     scanf("%d",&std[i].marks);
+    // }
+    // for(int i = 0 ; i <  3 ; i++){
+    //     if(std[i].marks>std[highestindex].marks){
+    //         highestindex = i;
+    //     }
+    // }
+    // printf("%s",std[highestindex].name);
+
+    // struct point points[2];
+    // for(int i = 0 ; i< 2 ;i++){
+    //     scanf("%d %d",&points[i].x,&points[i].y);
+    // }
+    // int distance = sqrt(pow((points[1].x-points[0].x),2)+pow((points[1].y-points[0].y),2));
+    // printf("Distance is %d",distance);
+
+
+
+    // struct product products ;
+    // struct product *ptr = &products;
+    // scanf("%s %d",ptr->name,&ptr->price);
+    // float discount = 0.8* ptr->price;
+    // printf("Product : %s\n",ptr->name);
+    // printf("Price : %d\n",ptr->price);
+    // printf("Final Price after 20 percent  Discount : %.2f",discount);
 
     return 0 ;
 }
