@@ -7,7 +7,7 @@
 //     float basic;
 //     float netSalary;
 // };
-
+b   
 // // Function to calculate net salary using pointer
 // void calculateSalary(struct Employee *emp) {
 //     float hra = 0.20 * emp->basic;

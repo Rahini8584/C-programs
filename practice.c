@@ -175,17 +175,17 @@ void reversearray(int *arr , int size){
     }
 }
 
-struct StudentMarks{
-    char studentName[50];
-    int marks[3];
+// struct StudentMarks{
+//     char studentName[50];
+//     int marks[3];
 
-};
+// };
 
-struct student{
-    char name[50];
-    int marks ;
+// struct student{
+//     char name[50];
+//     int marks ;
 
-};
+// };
 
 
 struct point{
@@ -199,6 +199,48 @@ struct product{
     char name[50];
     int price ;
 };
+
+
+enum grades{
+    A = 1,
+    B = 2,
+    C = 3
+};
+
+struct student{
+    int roll_number ;
+    char name[30];
+    int age ; 
+    int marks ;
+    enum grades grade ;
+
+};
+void displayStudentDetails(struct student ptr[] , int n ){
+    printf("Student details \n");
+    int highest_marks_index= 0;
+    
+
+    for(int i = 0 ; i<n; i++){
+        printf("Roll Number : %d\n",ptr[i].roll_number);
+        printf("Name : %s\n",ptr[i].name);
+        printf("Age : %d\n",ptr[i].age);
+        printf("Marks : %d\n",ptr[i].marks);
+        printf("grade : %c\n",ptr[i].grade);
+        printf("\n");
+        if(ptr[i].marks>ptr[highest_marks_index].marks){
+            highest_marks_index=i;
+        }
+    }
+
+    printf("Highest Marks Student\n");
+    printf("Roll Number : %d\n",ptr[highest_marks_index].roll_number);
+    printf("Name : %s\n",ptr[highest_marks_index].name);
+    printf("Marks : %d\n",ptr[highest_marks_index].marks);
+    printf("\n");
+
+}
+
+
 int main(){
     // int a, b ;
     // scanf("%d %d",&a,&b);
@@ -278,6 +320,25 @@ int main(){
     // printf("Product : %s\n",ptr->name);
     // printf("Price : %d\n",ptr->price);
     // printf("Final Price after 20 percent  Discount : %.2f",discount);
+
+    int n ;
+    printf("enter no. of students : \n");
+    
+    scanf("%d",&n);
+
+    struct student s[n];
+    int g;
+    for(int i = 0 ;i<n;i++){
+        scanf("%d %s %d %d %d",
+            &s[i].roll_number,
+            s[i].name,
+            &s[i].age,
+            &s[i].marks,
+            &g);
+        s[i].grade=g;
+    }
+    
+    displayStudentDetails(s,n);
 
     return 0 ;
 }
