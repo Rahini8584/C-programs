@@ -240,6 +240,65 @@ void displayStudentDetails(struct student ptr[] , int n ){
 
 }
 
+enum categories {
+    fiction = 1,
+    science ,
+    technology ,
+    history 
+};
+
+struct book {
+    int id ;
+    char name[50];
+    char author[50];
+    int copies ;
+    enum categories category ;
+};
+void inputBookData(struct book *b){
+    int choice;
+    printf("Enter Book ID: ");
+    scanf("%d",&b->id);
+    printf("Enter Book name : ");
+    scanf("%49s",b->name);
+    printf("Enter Author Name: ");
+    scanf("%49s",b->author);
+    printf("Enter category choice -> (1-fiction,2-science,3-technology,4-history) : ");
+    scanf("%d",&choice);
+    b->category = choice;
+
+}
+
+void dispayBookDetails(struct book b){
+    printf("\nBook ID: %d\n",b.id);
+    printf("Book Name: %s\n",b.name);
+    printf("Author: %s\n",b.author);
+    printf("No. of Copies: %d\n",b.copies);
+
+    if(b.category==fiction){
+        printf("Category : Fiction");
+    }
+    else if(b.category==science){
+        printf("Category : Science");
+    }
+    else if(b.category==technology){
+        printf("Category : Technology");
+    }
+    else{
+        printf("Category : History");
+    }
+
+}
+void maximumCopies(struct book b[],int n){
+    int index = 0;
+    for(int i = 0 ; i<n;i++){
+        if(b[i].copies>b[index].copies){
+            index = i;
+        }
+    }
+    printf("%s hax maximum copies(%d)",b[index].name,b[index].copies);
+}
+
+
 
 int main(){
     // int a, b ;
@@ -321,24 +380,37 @@ int main(){
     // printf("Price : %d\n",ptr->price);
     // printf("Final Price after 20 percent  Discount : %.2f",discount);
 
-    int n ;
-    printf("enter no. of students : \n");
+    // int n ;
+    // printf("enter no. of students : \n");
     
-    scanf("%d",&n);
+    // scanf("%d",&n);
 
-    struct student s[n];
-    int g;
-    for(int i = 0 ;i<n;i++){
-        scanf("%d %s %d %d %d",
-            &s[i].roll_number,
-            s[i].name,
-            &s[i].age,
-            &s[i].marks,
-            &g);
-        s[i].grade=g;
-    }
+    // struct student s[n];
+    // int g;
+    // for(int i = 0 ;i<n;i++){
+    //     scanf("%d %s %d %d %d",
+    //         &s[i].roll_number,
+    //         s[i].name,
+    //         &s[i].age,
+    //         &s[i].marks,
+    //         &g);
+    //     s[i].grade=g;
+    // }
     
-    displayStudentDetails(s,n);
+    // displayStudentDetails(s,n);
+    // int n ;
+    // printf("Enter no. of books : ");
+    // scanf("%d",&n);
+    // struct book bk[n];
+    // for(int i = 0 ; i<n ; i++){
+    //     printf("\nEnter Details of Book \n");
+    //     inputBookData(&bk);
+    // }
+    // for(int i = 0 ; i< n;i++){
+    //     printf("\n Book Details\n");
+        
+    // }
+
 
     return 0 ;
 }
