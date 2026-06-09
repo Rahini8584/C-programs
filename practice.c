@@ -343,21 +343,21 @@
 
 //     }
 // }
-enum payment{
-    cash=1,
-    upi,
-    card
-};
+// enum payment{
+//     cash=1,
+//     upi,
+//     card
+// };
 
-struct Order{
-    int id;
-    char customer_name[30];
-    char food_item[30];
-    int qty;
-    int price;
-    enum payment choice;
+// struct Order{
+//     int id;
+//     char customer_name[30];
+//     char food_item[30];
+//     int qty;
+//     int price;
+//     enum payment choice;
      
-};
+// };
 
 // void total_bill(struct Order ptr[],int n){
 //     total_bill=ptr[i]
