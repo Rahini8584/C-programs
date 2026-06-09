@@ -363,12 +363,12 @@
 //     total_bill=ptr[i]
 // }
 
-int main(){
-    printf("1. Apply Discount \n");
-    printf("2. Display All Orders \n");
-    printf("3. Search order by ID \n");
-    printf("4. Highest Bill customer \n");
-    printf("5. Exit\n");
+// int main(){
+//     printf("1. Apply Discount \n");
+//     printf("2. Display All Orders \n");
+//     printf("3. Search order by ID \n");
+//     printf("4. Highest Bill customer \n");
+//     printf("5. Exit\n");
 
 
 
@@ -496,5 +496,208 @@ int main(){
     // }
 
 
-    return 0 ;
-}
+//     return 0 ;
+// }
+
+
+// #include<stdio.h>
+// int main(){
+//     int arr[10];
+//     for(int i = 0 ; i<10; i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     int neg = 0 , pos = 0 ;
+//     for(int i = 0 ; i<10 ; i++){
+//         if(arr[i]>0){
+//             pos++;
+//         }
+//         else{
+//             neg++;
+//         }
+//     }
+//     printf("%d\n",pos);
+//     printf("%d",neg);
+//     return 0 ;
+// }
+
+// #include<stdio.h>
+// struct Student{
+//     int id;
+//     char student_name[30];
+//     char department[30];
+//     int semester;
+//     char subjects
+
+// // };
+// int main(){
+//     int a, b , c, d , e;
+//     scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+//     int result_default;
+//     float result_modified;
+//     if(d==0){
+//         printf("Division by zero is not allowed");
+//         return 0 ;
+//     }
+//     result_default=+b*c/d-e;
+//     result_modified= ((a+b)-e)*(c/(float)d);
+//     printf("Result with default operator precedence %d\n",result_default);
+//     printf("Result with modified operator precedence %f",result_modified);
+//     return 0 ;
+
+// }
+// #include<stdio.h>
+// enum grades{
+//     A=1,B,C
+// };
+// struct student{
+//     int rollnumber;
+//     char name[20];
+//     int age;
+//     int marks;
+//     enum grades grade;
+// };
+// void inputdetails(struct student students[], int n){
+//     int choice;
+//     for(int i =0 ; i<n ; i++){
+//         scanf("%d",&students[i].rollnumber);
+//         scanf("%s",students[i].name);
+//         scanf("%d",&students[i].age);
+//         scanf("%d",&students[i].marks);
+//         printf("enter the following for respective grades-> A-1 , B-2 , C-3\n");
+//         scanf("%d",&choice);
+//         students[i].grade=choice;
+//     }
+// }
+// void printdetails(struct student students[] , int n){
+//     printf("\nStudent details\n");
+//     for(int i = 0 ; i<n ; i++){
+//         printf("Roll Number : %d\n",students[i].rollnumber);
+//         printf("Name : %s\n",students[i].name);
+//         printf("Age : %d\n",students[i].age);
+//         printf("Marks : %d\n",students[i].marks);
+//         if(students[i].grade==1){
+//             printf("A");
+//         }
+//         else if(students[i].grade==2){
+//             printf("B");
+//         }
+//         else{
+//             printf("C");
+//         }
+//         printf("\n");
+//     }
+// }
+// void highestmarks(struct student students[], int n ){
+//     int index = 0 ;
+//     for(int i = 0 ; i<n ; i++){
+//         if(students[index].marks<students[i].marks){
+//             index= i;
+//         }
+//     }
+//     printf("\n Highest Marks Student\n");
+//     printf("Roll Number : %d\n",students[index].rollnumber);
+//     printf("Name : %s\n",students[index].name);
+//     printf("Marks : %d\n",students[index].marks);
+// }
+// int main(){
+//     int n ;
+//     scanf("%d",&n);
+//     struct student students[n];
+
+  
+//     inputdetails(students,n);
+//     printdetails(students,n);
+//     highestmarks(students,n);
+//     return 0 ;
+// }
+// #include<stdio.h>
+// enum categories{
+//     fiction =1 ,
+//     science,
+//     technology,
+//     history
+// };
+// struct book{
+//     int id;
+//     char bookname[30];
+//     char author[30];
+//     int copies;
+//     enum categories category;
+// };
+// void inputdetails(struct book books[],int n){
+//     int  choice;
+
+//     for(int i = 0 ; i<n; i++){
+//         scanf("%d",&books[i].id);
+//         scanf("%s",books[i].bookname);
+//         scanf("%s",books[i].author);
+//         scanf("%d",&books[i].copies);
+//         printf("enter following number for respective category (1-Fiction, 2-Sciene , 3-Technology , 4-History)\n");
+//         scanf("%d",&choice);
+//         books[i].category=choice;
+//     }
+// }
+// void printdetails(struct book books[], int n){
+//     printf("\n Book Details\n");
+//     printf("\n");
+//     for(int i = 0 ; i<n; i++){
+//         printf("Book ID : %d\n",books[i].id);
+//         printf("Book Name : %s\n",books[i].bookname);
+//         printf("Author : %s\n",books[i].author);
+//         printf("Copies : %d\n",books[i].copies);
+//         // printf("Category : %d\n",books[i].category);
+//         if(books[i].category==1){
+//             printf("Category : Fiction\n");
+//         }
+//         else if(books[i].category==2){
+//             printf("Category : Science\n");
+//         }
+//         else if(books[i].category==3){
+//             printf("Category : Technology\n");
+//         }
+//         else{
+//             printf("Category : History\n");
+//         }
+//         printf("\n");
+//     }
+//     printf("\n");
+// }
+// void searchbookbyid(struct book books[], int n, int searchid){
+//     int index = 0;
+
+//     for(int i = 0; i<n ;i++){
+//         if(searchid==books[i].id){
+//             index = i;
+//             printf("Searched Book Found\n");
+//             printf("Book ID : %d\n",books[index].id);
+//             printf("Book Name : %s\n",books[index].bookname);
+//             printf("Author : %s\n",books[index].author);
+//             printf("Copies : %d\n",books[index].copies);
+//             printf("\n");
+
+// }
+// }
+// }
+// void maximumcopies(struct book books[],int n){
+//     int index  = 0 ;
+//     for(int i = 0 ; i < n ; i++){
+//         if(books[index].copies<books[i].copies){
+//             index = i ;
+//         }
+//     }
+//     printf("Book With Maximum Copies\n");
+//     printf("Book ID : %d\n",books[index].id);
+//     printf("Book Name : %s\n",books[index].bookname);
+//     printf("Copies : %d\n",books[index].copies);
+// }
+// int main(){
+//     int n , searchid;
+//     scanf("%d",&n);
+//     struct book books[n];
+//     inputdetails(books,n);
+//     scanf("%d",&searchid);
+//     printdetails(books,n);
+//     searchbookbyid(books,n,searchid);
+//     maximumcopies(books,n);
+//     return 0 ;
+// }
