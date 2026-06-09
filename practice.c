@@ -79,228 +79,312 @@
 
 
 
-int add(int a, int b){
-    return a+b;
-}
-int square(int n){
-    return n*n;
-}
-void checkEvenOdd(int n){
-    if(n%2==0){
-        printf("EVEN");
-    }
-    else{
-        printf("ODD");
-    }
-}
-int factorial(int n){
-    int fact = 1;
-    for(int i = 1; i<=n ;i++){
-        fact = fact * i;
-    }
-    return fact ;
+// int add(int a, int b){
+//     return a+b;
+// }
+// int square(int n){
+//     return n*n;
+// }
+// void checkEvenOdd(int n){
+//     if(n%2==0){
+//         printf("EVEN");
+//     }
+//     else{
+//         printf("ODD");
+//     }
+// }
+// int factorial(int n){
+//     int fact = 1;
+//     for(int i = 1; i<=n ;i++){
+//         fact = fact * i;
+//     }
+//     return fact ;
 
-}
-int findLargest(int a , int b , int c){
-    if(a>b && a>c){
-        return a;
-    }
-    else if(b>a && b>c){
-        return b;
-    }
-    else{
-        return c;
-    }
-}
-int reverseNumber(int n){
-     int rem =0 ;
-    int rev = 0 ;
+// }
+// int findLargest(int a , int b , int c){
+//     if(a>b && a>c){
+//         return a;
+//     }
+//     else if(b>a && b>c){
+//         return b;
+//     }
+//     else{
+//         return c;
+//     }
+// }
+// int reverseNumber(int n){
+//      int rem =0 ;
+//     int rev = 0 ;
    
-    while(n!=0){
-        rem= n%10;
-        rev = rev*10+rem;
-        n=n/10;
-    }
-    return rev ;
-}
-int isArmstrong(int n){
+//     while(n!=0){
+//         rem= n%10;
+//         rev = rev*10+rem;
+//         n=n/10;
+//     }
+//     return rev ;
+// }
+// int isArmstrong(int n){
 
-    int rem = 0;
-    int sum = 0 ;
-    int temp = n;
-    int count = 0 ;
-    int s = n;
+//     int rem = 0;
+//     int sum = 0 ;
+//     int temp = n;
+//     int count = 0 ;
+//     int s = n;
 
-    while(s!=0){
-        s%10;
-        count++;
-        s=s/10;
-    }
-    while(temp!=0){
-        rem = temp%10 ;
-        sum += pow(rem,count);
-        temp = temp/10;
-    }
-    if(sum==n){
-        return 1 ;
-    }
-    else {
-        return 0 ;
-    }
-}
-int* getAddress(int *x){
-    return x;
-}
-
-
-
-void swap(int *a , int *b){
-    int temp = *a;
-    *a=*b;
-    *b=temp;
-}
+//     while(s!=0){
+//         s%10;
+//         count++;
+//         s=s/10;
+//     }
+//     while(temp!=0){
+//         rem = temp%10 ;
+//         sum += pow(rem,count);
+//         temp = temp/10;
+//     }
+//     if(sum==n){
+//         return 1 ;
+//     }
+//     else {
+//         return 0 ;
+//     }
+// }
+// int* getAddress(int *x){
+//     return x;
+// }
 
 
 
-void reversearray(int *arr , int size){
-    int *start = arr ;
-    int *end = arr + size -1;
-    int temp ;
-    while(start <end){
-        temp = *start ;
-        *start = *end ;
-        *end = temp ;
-        start++ ;
-        end--;
-    }
-}
+// void swap(int *a , int *b){
+//     int temp = *a;
+//     *a=*b;
+//     *b=temp;
+// }
 
-// struct StudentMarks{
-//     char studentName[50];
-//     int marks[3];
 
+
+// void reversearray(int *arr , int size){
+//     int *start = arr ;
+//     int *end = arr + size -1;
+//     int temp ;
+//     while(start <end){
+//         temp = *start ;
+//         *start = *end ;
+//         *end = temp ;
+//         start++ ;
+//         end--;
+//     }
+// }
+
+// // struct StudentMarks{
+// //     char studentName[50];
+// //     int marks[3];
+
+// // };
+
+// // struct student{
+// //     char name[50];
+// //     int marks ;
+
+// // };
+
+
+// struct point{
+//     int x ;
+//     int y ;
+// };
+
+
+
+// struct product{
+//     char name[50];
+//     int price ;
+// };
+
+
+// enum grades{
+//     A = 1,
+//     B = 2,
+//     C = 3
 // };
 
 // struct student{
-//     char name[50];
+//     int roll_number ;
+//     char name[30];
+//     int age ; 
 //     int marks ;
+//     enum grades grade ;
 
 // };
-
-
-struct point{
-    int x ;
-    int y ;
-};
-
-
-
-struct product{
-    char name[50];
-    int price ;
-};
-
-
-enum grades{
-    A = 1,
-    B = 2,
-    C = 3
-};
-
-struct student{
-    int roll_number ;
-    char name[30];
-    int age ; 
-    int marks ;
-    enum grades grade ;
-
-};
-void displayStudentDetails(struct student ptr[] , int n ){
-    printf("Student details \n");
-    int highest_marks_index= 0;
+// void displayStudentDetails(struct student ptr[] , int n ){
+//     printf("Student details \n");
+//     int highest_marks_index= 0;
     
 
-    for(int i = 0 ; i<n; i++){
-        printf("Roll Number : %d\n",ptr[i].roll_number);
-        printf("Name : %s\n",ptr[i].name);
-        printf("Age : %d\n",ptr[i].age);
-        printf("Marks : %d\n",ptr[i].marks);
-        printf("grade : %c\n",ptr[i].grade);
-        printf("\n");
-        if(ptr[i].marks>ptr[highest_marks_index].marks){
-            highest_marks_index=i;
-        }
-    }
+//     for(int i = 0 ; i<n; i++){
+//         printf("Roll Number : %d\n",ptr[i].roll_number);
+//         printf("Name : %s\n",ptr[i].name);
+//         printf("Age : %d\n",ptr[i].age);
+//         printf("Marks : %d\n",ptr[i].marks);
+//         printf("grade : %c\n",ptr[i].grade);
+//         printf("\n");
+//         if(ptr[i].marks>ptr[highest_marks_index].marks){
+//             highest_marks_index=i;
+//         }
+//     }
 
-    printf("Highest Marks Student\n");
-    printf("Roll Number : %d\n",ptr[highest_marks_index].roll_number);
-    printf("Name : %s\n",ptr[highest_marks_index].name);
-    printf("Marks : %d\n",ptr[highest_marks_index].marks);
-    printf("\n");
+//     printf("Highest Marks Student\n");
+//     printf("Roll Number : %d\n",ptr[highest_marks_index].roll_number);
+//     printf("Name : %s\n",ptr[highest_marks_index].name);
+//     printf("Marks : %d\n",ptr[highest_marks_index].marks);
+//     printf("\n");
 
-}
+// }
 
-enum categories {
-    fiction = 1,
-    science ,
-    technology ,
-    history 
+// enum categories {
+//     fiction = 1,
+//     science ,
+//     technology ,
+//     history 
+// };
+
+// struct book {
+//     int id ;
+//     char name[50];
+//     char author[50];
+//     int copies ;
+//     enum categories category ;
+// };
+// void inputBookData(struct book *b){
+//     int choice;
+//     printf("Enter Book ID: ");
+//     scanf("%d",&b->id);
+//     printf("Enter Book name : ");
+//     scanf("%49s",b->name);
+//     printf("Enter Author Name: ");
+//     scanf("%49s",b->author);
+//     printf("Enter category choice -> (1-fiction,2-science,3-technology,4-history) : ");
+//     scanf("%d",&choice);
+//     b->category = choice;
+
+// }
+
+// void dispayBookDetails(struct book b){
+//     printf("\nBook ID: %d\n",b.id);
+//     printf("Book Name: %s\n",b.name);
+//     printf("Author: %s\n",b.author);
+//     printf("No. of Copies: %d\n",b.copies);
+
+//     if(b.category==fiction){
+//         printf("Category : Fiction");
+//     }
+//     else if(b.category==science){
+//         printf("Category : Science");
+//     }
+//     else if(b.category==technology){
+//         printf("Category : Technology");
+//     }
+//     else{
+//         printf("Category : History");
+//     }
+
+// }
+// void maximumCopies(struct book b[],int n){
+//     int index = 0;
+//     for(int i = 0 ; i<n;i++){
+//         if(b[i].copies>b[index].copies){
+//             index = i;
+//         }
+//     }
+//     printf("%s hax maximum copies(%d)",b[index].name,b[index].copies);
+// }
+
+
+// enum payment_options{
+//     cash =1,
+//     upi,
+//     card
+// };
+// struct Order {
+//     int id ;
+//     char customer[30];
+//     char food_item[30];
+//     int qty ;
+//     int price ;
+//     enum payment_options method ;
+// };
+// void inputOrder(struct Order *ptr[] ,int n){
+//     int choice ;
+//     for(int i = 0 ; i<n; i++){
+//         printf("Enter order id:");
+//         scanf("%d",&ptr[i]->id);
+//         printf("Enter your Name:");
+//         scanf("%s",ptr[i]->customer);
+//         printf("Enter food item: ");
+//         scanf("%s",ptr[i]->food_item);
+//         printf("enter quantity: ");
+//         scanf("%d",&ptr[i]->qty);
+//         printf("Enter price per item :");
+//         scanf("%d",&ptr[i]->price);
+//         printf("enter your choice of payment method (1-cash , 2-UPI, 3- card)");
+//         scanf("%d",&choice);
+//         choice=ptr[i]->method;
+//     } 
+// }
+// void displayOrder(struct Order *ptr[] ,int n){
+//     printf("ORDER DETAILS \n");
+//     for(int i = 0 ; i<n ; i++){
+//         printf("Order ID : %d\n",ptr[i]->id);
+//         printf("Customer Name : %s\n",ptr[i]->customer);
+//         printf("Food Item : %s\n",ptr[i]->food_item);
+//         printf("Original Bill : %d\n",ptr[i]->price * ptr[i]->qty);
+//         printf("Discount :");
+//         printf("Final Bill : ");
+//         if(ptr[i]=)
+
+//     }
+// }
+enum payment{
+    cash=1,
+    upi,
+    card
 };
 
-struct book {
-    int id ;
-    char name[50];
-    char author[50];
-    int copies ;
-    enum categories category ;
+struct Order{
+    int id;
+    char customer_name[30];
+    char food_item[30];
+    int qty;
+    int price;
+    enum payment choice;
+     
 };
-void inputBookData(struct book *b){
-    int choice;
-    printf("Enter Book ID: ");
-    scanf("%d",&b->id);
-    printf("Enter Book name : ");
-    scanf("%49s",b->name);
-    printf("Enter Author Name: ");
-    scanf("%49s",b->author);
-    printf("Enter category choice -> (1-fiction,2-science,3-technology,4-history) : ");
-    scanf("%d",&choice);
-    b->category = choice;
 
-}
-
-void dispayBookDetails(struct book b){
-    printf("\nBook ID: %d\n",b.id);
-    printf("Book Name: %s\n",b.name);
-    printf("Author: %s\n",b.author);
-    printf("No. of Copies: %d\n",b.copies);
-
-    if(b.category==fiction){
-        printf("Category : Fiction");
-    }
-    else if(b.category==science){
-        printf("Category : Science");
-    }
-    else if(b.category==technology){
-        printf("Category : Technology");
-    }
-    else{
-        printf("Category : History");
-    }
-
-}
-void maximumCopies(struct book b[],int n){
-    int index = 0;
-    for(int i = 0 ; i<n;i++){
-        if(b[i].copies>b[index].copies){
-            index = i;
-        }
-    }
-    printf("%s hax maximum copies(%d)",b[index].name,b[index].copies);
-}
-
-
+// void total_bill(struct Order ptr[],int n){
+//     total_bill=ptr[i]
+// }
 
 int main(){
+    printf("1. Apply Discount \n");
+    printf("2. Display All Orders \n");
+    printf("3. Search order by ID \n");
+    printf("4. Highest Bill customer \n");
+    printf("5. Exit\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // int a, b ;
     // scanf("%d %d",&a,&b);
     // int result = add(a,b);
